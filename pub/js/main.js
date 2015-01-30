@@ -3,18 +3,34 @@
 //
 //document.write(board);
 
-document.write(
-    "<h1>Hello world</h1>"
-);
+function print(board){
+    document.write('<table>');
+    
+    var cell = "<td></td>";
+    var row = "<tr></tr>";
+    
+    _.times(8, function(){
+        document.write("<tr>");
+        _.times(8, function(){
+            document.write(cell);
+        });
+        document.write("</tr>");
+    });
+    
+    
+     document.write('</table>');
+}
 
-var users = [
-  { 'user': 'barney', 'age': 36 },
-  { 'user': 'fred',   'age': 40 }
-];
+print();
+
+//document.write(
+//    '<table>',
+//    '<tr>', '<td>cell1', '</td>', '<td>cell2', '</td>', '</tr>',
+//    '</table>'
+//);
+//   
 
 
-
-document.write(_.pluck(users, 'user'));
 
 
 
