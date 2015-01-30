@@ -1,145 +1,384 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-        
-        
-        <table>
-            <thead>
-                <tr>
-                    <td></td>
-                    <th>A</th>
-                    <th>B</th>
-                    <th>C</th>
-                    <th>D</th>
-                    <th>E</th>
-                    <th>F</th>
-                    <th>G</th>
-                    <th>H</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th id=>8</th>
-                    <td id="A8" class="piece black rook"></td>
-                    <td id="B8" class="piece black knight"></td>
-                    <td id="C8" class="piece black bishop"></td>
-                    <td id="D8" class="piece black king" td>
-                    <td id="E8" class="piece black queen"></td>
-                    <td id="F8" class="piece black bishop"></td>
-                    <td id="G8" class="piece black knight"></td>
-                    <td id="H8" class="piece black rook"></td>
-                </tr>
-                <tr>
-                    <th>7</th>
-                    <td id="A7" class="piece black pawn"></td>
-                    <td id="B7" class="piece black pawn"></td>
-                    <td id="C7" class="piece black pawn"></td>
-                    <td id="D7" class="piece black pawn"></td>
-                    <td id="E7" class="piece black pawn"></td>
-                    <td id="F7" class="piece black pawn"></td>
-                    <td id="G7" class="piece black pawn"></td>
-                    <td id="H7" class="piece black pawn"></td>
-                </tr>
-                <tr>
-                    <th>6</th>
-                    <td id="A6"></td>
-                    <td id="B6"></td>
-                    <td id="C6"></td>
-                    <td id="D6"></td>
-                    <td id="E6"></td>
-                    <td id="F6"></td>
-                    <td id="G6"></td>
-                    <td id="H6"></td>
-                </tr>
-                <tr>
-                    <th>5</th>
-                    <td id="A5"></td>
-                    <td id="B5"></td>
-                    <td id="C5"></td>
-                    <td id="D5"></td>
-                    <td id="E5"></td>
-                    <td id="F5"></td>
-                    <td id="G5"></td>
-                    <td id="H5"></td>
-                </tr>
-                <tr>
-                    <th>4</th>
-                    <td id="A4"></td>
-                    <td id="B4"></td>
-                    <td id="C4"></td>
-                    <td id="D4"></td>
-                    <td id="E4"></td>
-                    <td id="F4"></td>
-                    <td id="G4"></td>
-                    <td id="H4"></td>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td id="A3"></td>
-                    <td id="B3"></td>
-                    <td id="C3"></td>
-                    <td id="D3"></td>
-                    <td id="E3"></td>
-                    <td id="F3"></td>
-                    <td id="G3"></td>
-                    <td id="H3"></td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td id="A2" class="piece white pawn"></td>
-                    <td id="B2" class="piece white pawn"></td>
-                    <td id="C2" class="piece white pawn"></td>
-                    <td id="D2" class="piece white pawn"></td>
-                    <td id="E2" class="piece white pawn"></td>
-                    <td id="F2" class="piece white pawn"></td>
-                    <td id="G2" class="piece white pawn"></td>
-                    <td id="H2" class="piece white pawn"></td>
-                </tr>
-                <tr>
-                    <th>1</th>
-                    <td id="A1" class="piece white rook"></td>
-                    <td id="B1" class="piece white knight"></td>
-                    <td id="C1" class="piece white bishop"></td>
-                    <td id="D1" class="piece white queen"></td>
-                    <td id="E1" class="piece white king"></td>
-                    <td id="F1" class="piece white bishop"></td>
-                    <td id="G1" class="piece white knight"></td>
-                    <td id="H1" class="piece white rook"></td>
-                </tr>
-            </tbody>
-        </table>
-        
-        
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-    </body>
-</html>
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+table {
+    width: 80%;
+}
+
+thead th {
+    border-bottom: 1px solid red;
+}
+
+tbody th {
+    border-right: 1px solid blue;
+}
+
+tbody td {
+    width: 10%;
+    padding-bottom: 10%;
+    border: 1px solid black;
+    position: relative;
+}
+
+tbody :nth-child(even) td:nth-child(even),
+tbody :nth-child(odd) td:nth-child(odd){
+    background-color: gray;
+}
+
+/*Pieces*/
+
+.piece::before {
+    position: absolute;
+}
+
+.piece:hover {
+    color: red;
+}
+
+.piece.white.queen::before {
+    content: "\2655";
+    font-size: 6vw;
+}
+
+.piece.white.king::before {
+    content: "\2654";
+    font-size: 6vw;
+}
+
+.piece.white.bishop::before {
+    content: "\2657";
+    font-size: 6vw;
+}
+
+.piece.white.knight::before {
+    content: "\2658";
+    font-size: 6vw;
+}
+
+.piece.white.rook::before {
+    content: "\2656";
+    font-size: 6vw;
+}
+
+.piece.white.pawn::before {
+    content: "\2659";
+    font-size: 6vw;
+}
+
+/*Black pieces*/
+
+.piece.black.queen::before {
+    content: "\265A";
+    font-size: 6vw;
+}
+
+.piece.black.king::before {
+    content: "\265B";
+    font-size: 6vw;
+}
+
+.piece.black.bishop::before {
+    content: "\265D";
+    font-size: 6vw;
+}
+
+.piece.black.knight::before {
+    content: "\265E";
+    font-size: 6vw;
+}
+
+.piece.black.rook::before {
+    content: "\265C";
+    font-size: 6vw;
+}
+
+.piece.black.pawn::before {
+    content: "\265D";
+    font-size: 6vw;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
