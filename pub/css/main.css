@@ -97,7 +97,101 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+table {
+    width: 80%;
+}
 
+thead th {
+    border-bottom: 1px solid red;
+}
+
+tbody th {
+    border-right: 1px solid blue;
+}
+
+tbody td {
+    width: 10%;
+    padding-bottom: 10%;
+    border: 1px solid black;
+    position: relative;
+}
+
+tbody :nth-child(even) td:nth-child(even),
+tbody :nth-child(odd) td:nth-child(odd){
+    background-color: gray;
+}
+
+/*Pieces*/
+
+.piece::before {
+    position: absolute;
+}
+
+.piece:hover {
+    color: red;
+}
+
+.piece.white.queen::before {
+    content: "\2655";
+    font-size: 6vw;
+}
+
+.piece.white.king::before {
+    content: "\2654";
+    font-size: 6vw;
+}
+
+.piece.white.bishop::before {
+    content: "\2657";
+    font-size: 6vw;
+}
+
+.piece.white.knight::before {
+    content: "\2658";
+    font-size: 6vw;
+}
+
+.piece.white.rook::before {
+    content: "\2656";
+    font-size: 6vw;
+}
+
+.piece.white.pawn::before {
+    content: "\2659";
+    font-size: 6vw;
+}
+
+/*Black pieces*/
+
+.piece.black.queen::before {
+    content: "\265A";
+    font-size: 6vw;
+}
+
+.piece.black.king::before {
+    content: "\265B";
+    font-size: 6vw;
+}
+
+.piece.black.bishop::before {
+    content: "\265D";
+    font-size: 6vw;
+}
+
+.piece.black.knight::before {
+    content: "\265E";
+    font-size: 6vw;
+}
+
+.piece.black.rook::before {
+    content: "\265C";
+    font-size: 6vw;
+}
+
+.piece.black.pawn::before {
+    content: "\265D";
+    font-size: 6vw;
+}
 
 
 
