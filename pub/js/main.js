@@ -1,18 +1,25 @@
 
 //var board = document.getElementById('chessboard');
 //
-//document.write(board);
+//document.write(board);\
 
 function print(board){
     document.write('<table>');
     
-    var cell = "<td></td>";
-    var row = "<tr></tr>";
+    var cellOpen = "<td>";
+    var cellClose = "</td>";
+    var black = ["&#9812;","&#9813;","&#9814;"];
     
+    function row1 (){
+        for(i = 0; i < black.length; i++){
+            return black[i];
+        }
+    }
+    console.log(row1());
     _.times(8, function(){
         document.write("<tr>");
         _.times(8, function(){
-            document.write(cell);
+            document.write(cellOpen + row1() + cellClose);
         });
         document.write("</tr>");
     });
@@ -34,6 +41,9 @@ print();
 
 
 
+// 
+//
+
 // var board = [
 // ['R','N','B','Q','K','B','N','R'],
 // ['P','P','P','P','P','P','P','P'],
@@ -45,10 +55,12 @@ print();
 // ['r','n','b','q','k','b','n','r'],
 // ];
 //
-// var printBoard = function() {console.log(board.join('\n') + '\n\n');}
+//var printBoard = function() {console.log(board.join('\n') + '\n\n');}
 //
+//document.write(board);
 //
-//
+////
+////
 // function print(board){
 //   // Before any rows are printed, print the `<table>`...
 //   console.log('<table class="chessboard">');
