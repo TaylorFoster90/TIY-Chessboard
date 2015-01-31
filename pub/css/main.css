@@ -126,6 +126,7 @@ tbody :nth-child(odd) td:nth-child(odd){
 
 .piece::before {
     position: absolute;
+    margin-left: 20%;
 }
 
 .piece:hover {
@@ -190,7 +191,7 @@ tbody :nth-child(odd) td:nth-child(odd){
 }
 
 .piece.black.pawn::before {
-    content: "\265D";
+    content: "\265F";
     font-size: 6vw;
 }
 
