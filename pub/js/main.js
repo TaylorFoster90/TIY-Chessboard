@@ -95,7 +95,9 @@ board.h = {
     'seven': '<span class="piece white knight"></span>',
     'eight': '<span class="piece white rook"></span>'
 };
- 
+function move(fromX, fromY, toX, toY){
+    
+}
 print(board);
 //
 //// will house references to all pieces
