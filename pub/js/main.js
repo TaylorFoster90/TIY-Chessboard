@@ -114,7 +114,21 @@ function movePiece(){
         var lContent = document.getElementById('a7').innerHTML;
         document.getElementById('a7').innerHTML = "";
         document.getElementById('c6').innerHTML = lContent;
-        return moveCounter++;
+        moveCounter++;
+        }else if(moveCounter == 2){
+        var lContent = document.getElementById('g3').innerHTML;
+        document.getElementById('g3').innerHTML = "";
+        document.getElementById('e3').innerHTML = lContent;
+        moveCounter++;
+        }else if(moveCounter == 3){
+        var lContent = document.getElementById('b5').innerHTML;
+        document.getElementById('b5').innerHTML = "";
+        document.getElementById('c5').innerHTML = lContent;
+        moveCounter++;
+        }else if(moveCounter == 4){
+        var lContent = document.getElementById('').innerHTML;
+        document.getElementById('g3').innerHTML = "";
+        document.getElementById('e3').innerHTML = lContent;
         }
     }
 
