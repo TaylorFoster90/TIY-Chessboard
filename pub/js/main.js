@@ -103,14 +103,20 @@ board.h = {
 
 
 print(board);
-
+var moveCounter = 0;
 function movePiece(){
-    
- var lContent = document.getElementById('g4').innerHTML;
-    document.getElementById('g4').innerHTML = "";
-    document.getElementById('e4').innerHTML = lContent;
-    
-}
+        if(moveCounter == 0){
+        var lContent = document.getElementById('g4').innerHTML;
+        document.getElementById('g4').innerHTML = "";
+        document.getElementById('e4').innerHTML = lContent;
+        moveCounter++;
+        }else if(moveCounter == 1){
+        var lContent = document.getElementById('a7').innerHTML;
+        document.getElementById('a7').innerHTML = "";
+        document.getElementById('c6').innerHTML = lContent;
+        return moveCounter++;
+        }
+    }
 
 //document.getElementById("button").onClick='movePiece()';
 var btn = document.createElement("BUTTON");        
