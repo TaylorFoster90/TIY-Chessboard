@@ -106,9 +106,9 @@ print(board);
 
 function movePiece(){
     
-    var lContent = document.getElementById('a1').innerHTML;
-    document.getElementById('a1').innerHTML = "";
-    document.getElementById('c4').innerHTML = lContent;
+ var lContent = document.getElementById('g4').innerHTML;
+    document.getElementById('g4').innerHTML = "";
+    document.getElementById('e4').innerHTML = lContent;
     
 }
 
