@@ -1,7 +1,13 @@
 function print(){
     var rowIdentifier = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+    var i = 0;
     document.write('<table>');
-            var i = 0;
+    document.write('<thead');
+        _.foreach(row, function(i){
+            document.write([i]);
+            i++;
+        }
+    document.write('</thead>');
     _.forEach(board, function(row){
         document.write("<tr>");
         var idNumber = 1;
@@ -112,17 +118,13 @@ function movePiece(){
     
 }
 
-document.getElementById("button").onClick='movePiece()';
-//var btn = document.createElement("BUTTON");        
-//var t = document.createTextNode("NEXT MOVE");
-//btn.appendChild(t);                                
-//document.body.appendChild(btn);
-//    document.write('<div class="button-group">');
-//    document.write('<i class="fa fa-angle-double-left fa-lg"></i>');
-//    document.write('<i class="fa fa-angle-left fa-lg"></i>');
-//    document.write('<i class="fa fa-angle-right fa-lg" onClick="movePiece()"></i>');
-//    document.write('<i class="fa fa-angle-double-right fa-lg"></i>');
-//    document.write('</div>');
+//document.getElementById("button").onClick='movePiece()';
+var btn = document.createElement("BUTTON");        
+var t = document.createTextNode("NEXT MOVE");
+btn.appendChild(t);                                
+document.body.appendChild(btn);
+btn.setAttribute("class", "movement");
+btn.setAttribute("onClick", "movePiece()");
 
 
 //
