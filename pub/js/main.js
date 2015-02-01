@@ -2,12 +2,6 @@ function print(){
     var rowIdentifier = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
     var i = 0;
     document.write('<table>');
-    document.write('<thead');
-        _.foreach(row, function(i){
-            document.write([i]);
-            i++;
-        }
-    document.write('</thead>');
     _.forEach(board, function(row){
         document.write("<tr>");
         var idNumber = 1;
