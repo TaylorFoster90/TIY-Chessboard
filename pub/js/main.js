@@ -1,16 +1,21 @@
 function print(){
-    document.body.outerHTML='<table>';
-    
+    var rowIdentifier = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+    document.write('<table>');
+            var i = 0;
     _.forEach(board, function(row){
-        document.body.innerHTML='<tr>';
+        document.write("<tr>");
+        var idNumber = 1;
         _.forEach(row, function(square){
-            document.body.innerHTML='<td></td>'
-   
+            
+            var squareLocation = rowIdentifier[i] + idNumber;
+            document.write("<td id=" + squareLocation + ">" + square + "</td>")
+                idNumber++;
         });
-        document.body.innerHTML='</tr>';
+        i++;
+        document.write("</tr>");
     });
     
-    document.body.outerHTML='</table>';
+    document.write('</table>');
     
 }
  
@@ -98,6 +103,28 @@ board.h = {
 
 
 print(board);
+
+function movePiece(){
+    
+    var lContent = document.getElementById('a1').innerHTML;
+    document.getElementById('a1').innerHTML = "";
+    document.getElementById('c4').innerHTML = lContent;
+    
+}
+
+document.getElementById("button").onClick='movePiece()';
+//var btn = document.createElement("BUTTON");        
+//var t = document.createTextNode("NEXT MOVE");
+//btn.appendChild(t);                                
+//document.body.appendChild(btn);
+//    document.write('<div class="button-group">');
+//    document.write('<i class="fa fa-angle-double-left fa-lg"></i>');
+//    document.write('<i class="fa fa-angle-left fa-lg"></i>');
+//    document.write('<i class="fa fa-angle-right fa-lg" onClick="movePiece()"></i>');
+//    document.write('<i class="fa fa-angle-double-right fa-lg"></i>');
+//    document.write('</div>');
+
+
 //
 //// will house references to all pieces
 //var pieces = [];
