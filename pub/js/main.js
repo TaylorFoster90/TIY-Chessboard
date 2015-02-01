@@ -1,16 +1,16 @@
 function print(){
-    document.write('<table>');
+    document.body.outerHTML='<table>';
     
     _.forEach(board, function(row){
-        document.write("<tr>");
+        document.body.innerHTML='<tr>';
         _.forEach(row, function(square){
-            document.write("<td>" + square + "</td>")
+            document.body.innerHTML='<td></td>'
    
         });
-        document.write("</tr>");
+        document.body.innerHTML='</tr>';
     });
     
-    document.write('</table>');
+    document.body.outerHTML='</table>';
     
 }
  
