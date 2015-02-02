@@ -126,9 +126,20 @@ function movePiece(){
         document.getElementById('c5').innerHTML = lContent;
         moveCounter++;
         }else if(moveCounter == 4){
-        var lContent = document.getElementById('').innerHTML;
-        document.getElementById('g3').innerHTML = "";
-        document.getElementById('e3').innerHTML = lContent;
+        var lContent = document.getElementById('g7').innerHTML;
+        document.getElementById('g7').innerHTML = "";
+        document.getElementById('f7').innerHTML = lContent;
+        moveCounter++;
+        }else if(moveCounter == 5){
+        var lContent = document.getElementById('b4').innerHTML;
+        document.getElementById('b4').innerHTML = "";
+        document.getElementById('d4').innerHTML = lContent;
+        moveCounter++;
+        }else if(moveCounter == 6){
+        var lContent = document.getElementById('h6').innerHTML;
+        document.getElementById('h6').innerHTML = "";
+        document.getElementById('g7').innerHTML = lContent;
+        moveCounter++;
         }
     }
 
