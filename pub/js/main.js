@@ -140,6 +140,11 @@ function movePiece(){
         document.getElementById('h6').innerHTML = "";
         document.getElementById('g7').innerHTML = lContent;
         moveCounter++;
+        }else if(moveCounter == 7){
+        var lContent = document.getElementById('h7').innerHTML;
+        document.getElementById('h7').innerHTML = "";
+        document.getElementById('f6').innerHTML = lContent;
+        moveCounter++;
         }
     }
 
