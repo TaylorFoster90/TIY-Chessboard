@@ -144,17 +144,22 @@ function movePiece(){
         var lContent = document.getElementById('h7').innerHTML;
         document.getElementById('h7').innerHTML = "";
         document.getElementById('f6').innerHTML = lContent;
-        moveCounter++;
-        }
+        moveCounter++;}
     }
 
 //document.getElementById("button").onClick='movePiece()';
-var btn = document.createElement("BUTTON");        
-var t = document.createTextNode("NEXT MOVE");
-btn.appendChild(t);                                
-document.body.appendChild(btn);
-btn.setAttribute("class", "movement");
-btn.setAttribute("onClick", "movePiece()");
+var btnNext = document.createElement("BUTTON");        
+var t = document.createTextNode("\u2799");
+btnNext.appendChild(t);                                
+document.body.appendChild(btnNext);
+btnNext.setAttribute("class", "movement");
+btnNext.setAttribute("onClick", "movePiece()");
+
+var btnLast = document.createElement("BUTTON");
+var arrowL = document.createTextNode("\u27A0");
+btnLast.appendChild(arrowL);
+document.body.appendChild(btnLast);
+btnLast.setAttribute("onClick", "movePiece(moveCounter == ");
 
 
 //
